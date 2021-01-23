@@ -8,7 +8,7 @@ import { Output, EventEmitter } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  name = 'JAVA Class'
+  name = 'Personal DVD Player'
   @Output() clickedOnMenu = new EventEmitter<string>();
 
   constructor() { }

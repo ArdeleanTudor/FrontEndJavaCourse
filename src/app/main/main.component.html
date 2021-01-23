@@ -1,11 +1,31 @@
-<mat-drawer-container class="all-screen" [hasBackdrop]="true">
-    <mat-drawer #drawer>
+<mat-drawer-container class="all-screen" [hasBackdrop]="true" >
+    <!-- <mat-drawer #drawer>
         <input type="password">
-    </mat-drawer>
+    </mat-drawer> -->
 
-    <app-navbar (clickedOnMenu)="drawer.toggle()">
+    <mat-sidenav #sidenav mode="over">
+        <mat-nav-list>
+            <button mat-flat-button color="warn"  (click)="sidenav.close()" style="float: right; min-width: 10px;
+            border-radius: 30px;">x</button>
+            <h2 matSubheader>MENU</h2>
+            <mat-divider></mat-divider>
+          <a mat-list-item [routerLink]="'/'" (click)="sidenav.close()"> <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+            Home </a>
+          <h2 matSubheader>VIDEOS</h2>
+          <mat-divider></mat-divider>
+          <a mat-list-item [routerLink]="'/add-video'"><mat-icon>library_add</mat-icon> Add Video </a>
+          <a mat-list-item [routerLink]="'/'"><mat-icon>video_library</mat-icon> Video List </a>
+          <mat-divider></mat-divider>
+          <h2 matSubheader>PLAYLISTS</h2>
+          <mat-divider></mat-divider>
+          <a mat-list-item [routerLink]="'/add-playlist'"><mat-icon>library_add</mat-icon> Create Playlist </a>
+          <a mat-list-item [routerLink]="'/playlist-list'"> <mat-icon>video_library</mat-icon>Playlist List </a>
+        </mat-nav-list>
+      </mat-sidenav>
+    <app-navbar (clickedOnMenu)="sidenav.toggle()">
     </app-navbar>
     <!-- aici o sa vina paginile noastre -->
+ 
     <router-outlet></router-outlet>    
 
 </mat-drawer-container>
