@@ -13,13 +13,14 @@
             Home </a>
           <h2 matSubheader>VIDEOS</h2>
           <mat-divider></mat-divider>
-          <a mat-list-item [routerLink]="'/add-video'"><mat-icon>library_add</mat-icon> Add Video </a>
           <a mat-list-item [routerLink]="'/'"><mat-icon>video_library</mat-icon> Video List </a>
+          <a mat-list-item [routerLink]="'/add-video'"><mat-icon>library_add</mat-icon> Add Video </a>
           <mat-divider></mat-divider>
           <h2 matSubheader>PLAYLISTS</h2>
           <mat-divider></mat-divider>
-          <a mat-list-item [routerLink]="'/add-playlist'"><mat-icon>library_add</mat-icon> Create Playlist </a>
           <a mat-list-item [routerLink]="'/playlist-list'"> <mat-icon>video_library</mat-icon>Playlist List </a>
+          <a mat-list-item [routerLink]="'/add-playlist'"><mat-icon>library_add</mat-icon> Create Playlist </a>
+
         </mat-nav-list>
       </mat-sidenav>
     <app-navbar (clickedOnMenu)="sidenav.toggle()">

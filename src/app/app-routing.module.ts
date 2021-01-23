@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageOneComponent } from './page-one/page-one.component';
 import { PageTwoComponent } from './page-two/page-two.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
+import { PlaylistListComponent } from './playlist-list/playlist-list.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'play-video',
     component: VideoPlayerComponent
+  },
+  {
+    path: 'playlist-list',
+    component: PlaylistListComponent
   }
 ];
 

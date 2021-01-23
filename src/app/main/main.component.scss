@@ -2,3 +2,10 @@
     height: 100%;
     width: 100%;
 }
+button:focus {
+    outline: none !important;
+}
+
+.mat-list-option:hover, .mat-list-option:focus, .mat-nav-list .mat-list-item:hover, .mat-nav-list .mat-list-item:focus, .mat-action-list .mat-list-item:hover, .mat-action-list .mat-list-item:focus {
+    background: rgba(1,1,1,0.09);
+}

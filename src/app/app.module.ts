@@ -47,6 +47,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { VideoPlayerComponent } from './video-player/video-player.component';
+import { PlaylistListComponent } from './playlist-list/playlist-list.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
     PageOneComponent,
     PageTwoComponent,
     VideoCardComponent,
-    VideoPlayerComponent
+    VideoPlayerComponent,
+    PlaylistListComponent
   ],
   imports: [
     BrowserModule,
