@@ -48,6 +48,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import { PlaylistListComponent } from './playlist-list/playlist-list.component';
+import { PlaylistCardComponent } from './playlist-card/playlist-card.component';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -58,9 +61,11 @@ import { PlaylistListComponent } from './playlist-list/playlist-list.component';
     PageTwoComponent,
     VideoCardComponent,
     VideoPlayerComponent,
-    PlaylistListComponent
+    PlaylistListComponent,
+    PlaylistCardComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -99,7 +104,7 @@ import { PlaylistListComponent } from './playlist-list/playlist-list.component';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    FlexLayoutModule
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-video-card',
@@ -6,17 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./video-card.component.scss']
 })
 export class VideoCardComponent implements OnInit {
-
+  @Input() video: any;
   list:string[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
-    this.list.push('ana');
-    this.list.push('ana');
-    this.list.push('ana');
-    this.list.push('ana');
-    this.list.push('ana');
   }
 
 }
