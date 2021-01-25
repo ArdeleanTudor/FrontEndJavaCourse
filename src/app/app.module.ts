@@ -11,7 +11,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MainComponent } from './main/main.component'
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { PageOneComponent } from './page-one/page-one.component';
-import { PageTwoComponent } from './page-two/page-two.component';
 import {MatButtonModule} from '@angular/material/button';
 import { VideoCardComponent } from './video-card/video-card.component'
 import {MatCardModule} from '@angular/material/card'
@@ -51,6 +50,8 @@ import { PlaylistListComponent } from './playlist-list/playlist-list.component';
 import { PlaylistCardComponent } from './playlist-card/playlist-card.component';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
+import { AddVideoComponent } from './add-video/add-video.component';
+import { EditVideoComponent } from './edit-video/edit-video.component';
 
 @NgModule({
   declarations: [
@@ -58,11 +59,12 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     MainComponent,
     PageOneComponent,
-    PageTwoComponent,
     VideoCardComponent,
     VideoPlayerComponent,
     PlaylistListComponent,
-    PlaylistCardComponent
+    PlaylistCardComponent,
+    AddVideoComponent,
+    EditVideoComponent
   ],
   imports: [
     HttpClientModule,

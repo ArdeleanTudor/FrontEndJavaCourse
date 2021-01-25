@@ -1,0 +1,93 @@
+<div class="container"> 
+   <div class="title-add"><h1 style="margin: auto;">Add a new video</h1> </div> 
+<form class="videoForm" name="videoForm">
+<div  class="videoFormDiv" style="width: 500px;">
+    <div class="submit-form" style=" margin-bottom: 50px;">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            required
+            [(ngModel)]="video.name"
+            name="name"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            class="form-control"
+            id="description"
+            required
+            [(ngModel)]="video.description"
+            name="description"
+          />
+        </div>
+
+        <div class="form-group">
+            <label for="genre">Genre</label>
+            <input
+              class="form-control"
+              id="genre"
+              required
+              [(ngModel)]="video.genre"
+              name="genre"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="imgPath">Image Path</label>
+            <input
+              class="form-control"
+              id="imgPath"
+              required
+              [(ngModel)]="video.imgPath"
+              name="imgPath"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="singer">Singer</label>
+            <input
+              class="form-control"
+              id="singer"
+              required
+              [(ngModel)]="video.singer"
+              name="singer"
+            />
+          </div>
+          <div class="form-group">
+            <label for="urlCode">Url Code</label>
+            <input
+              class="form-control"
+              id="urlCode"
+              required
+              [(ngModel)]="video.urlCode"
+              name="urlCode"
+            />
+          </div>
+          <div class="form-group">
+            <label for="duration">Duration</label>
+            <input
+              class="form-control"
+              id="duration"
+              required
+              [(ngModel)]="video.duration"
+              name="duration"
+            />
+          </div>
+  
+        <button (click)="addVideo()" class="btn btn-success">Add Video</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h3>You successfully created a product!</h3>
+        <button class="btn btn-success" (click)="newVideo()">New..</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>

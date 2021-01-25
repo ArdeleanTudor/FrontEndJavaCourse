@@ -1,9 +1,10 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PageOneComponent } from './page-one/page-one.component';
-import { PageTwoComponent } from './page-two/page-two.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import { PlaylistListComponent } from './playlist-list/playlist-list.component';
+import { AddVideoComponent } from './add-video/add-video.component';
+import { EditVideoComponent } from './edit-video/edit-video.component';
 
 const routes: Routes = [
   {
@@ -11,16 +12,20 @@ const routes: Routes = [
     component: PageOneComponent
   },
   {
-    path: 'two',
-    component: PageTwoComponent
-  },
-  {
-    path: 'play-video',
+    path: 'play-video/:id',
     component: VideoPlayerComponent
   },
   {
     path: 'playlist-list',
     component: PlaylistListComponent
+  },
+  {
+    path: 'add-video',
+    component: AddVideoComponent
+  },
+  {
+    path: 'edit-video/:id',
+    component: EditVideoComponent
   }
 ];
 
