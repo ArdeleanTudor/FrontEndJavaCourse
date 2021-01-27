@@ -1,4 +1,4 @@
-<div class="double-border-text">Playlist List</div>
+<div class="double-border-text">Playlist  List</div>
 <div class="all_screen font">
     
     <div fxLayout="row wrap">
@@ -9,8 +9,8 @@
         fxFlex.lt-lg="33%"
         fxFlex.lt-xl="25%"
         
-        *ngFor="let num of [1,2,3,4,5,6,7,8,9,10,11,12,13,14]">
-            <app-playlist-card></app-playlist-card>
+        *ngFor="let playlist of playlists.data">
+            <app-playlist-card [playlist]="playlist"></app-playlist-card>
         </div>
     </div>   
    

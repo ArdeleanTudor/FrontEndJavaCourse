@@ -14,20 +14,40 @@ export class VideoService {
     return this.http.get(this.rootURL + '/videos');
   }
 
-  create(data: { duration: number; genre: string; imgPath: string; name: string; singer: string; urlCode: string; }): Observable<any> {
+  getPlaylists() : Observable<any> {
+    return this.http.get(this.rootURL + '/playlists');
+  }
+
+  createVideo(data: { duration: number; genre: string; imgPath: string; name: string; singer: string; urlCode: string; }): Observable<any> {
     return this.http.post(this.rootURL + '/videos', data);
   }
 
-  getById(id:number | string | null): Observable<any> {
+  createPlaylist(data: { imgPath: string; name: string; }): Observable<any> {
+    return this.http.post(this.rootURL + '/playlists', data);
+  }
+
+  getVideoById(id:number | string | null): Observable<any> {
     return this.http.get(`${this.rootURL}/videos/${id}`);
   }
 
-  update(data : { duration: number; genre: string; imgPath: string; name: string; singer: string; urlCode: string; }): Observable<any> {
+  getPlaylistById(id:number | string | null): Observable<any> {
+    return this.http.get(`${this.rootURL}/playlists/${id}`);
+  }
+
+  updateVideo(data : { duration: number; genre: string; imgPath: string; name: string; singer: string; urlCode: string; }): Observable<any> {
     return this.http.put(this.rootURL + '/videos', data);
   }
 
-  delete(id :number): Observable<any> {
+  updatePlaylist(data : { imgPath: string; name: string; }): Observable<any> {
+    return this.http.put(this.rootURL + '/playlists', data);
+  }
+
+  deleteVideo(id :number): Observable<any> {
     return this.http.delete(`${this.rootURL}/videos/${id}`);
+  }
+
+  deletePlaylist(id :number): Observable<any> {
+    return this.http.delete(`${this.rootURL}/playlists/${id}`);
   }
 
 }

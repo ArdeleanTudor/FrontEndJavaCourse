@@ -11,14 +11,15 @@ export class VideoCardComponent implements OnInit {
   @Input() video: any;
   list:string[] = [];
 
-  constructor(private videoService: VideoService, private route: ActivatedRoute,
+  constructor(
+    private videoService: VideoService,
     private router: Router) { }
 
   ngOnInit(): void {
   }
 
   deleteVideo(): void {
-    this.videoService.delete(this.video.id)
+    this.videoService.deleteVideo(this.video.id)
       .subscribe(
         response => {
           console.log(response);

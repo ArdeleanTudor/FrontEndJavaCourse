@@ -50,8 +50,12 @@ import { PlaylistListComponent } from './playlist-list/playlist-list.component';
 import { PlaylistCardComponent } from './playlist-card/playlist-card.component';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
-import { AddVideoComponent } from './add-video/add-video.component';
-import { EditVideoComponent } from './edit-video/edit-video.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddFormVideoComponent } from './add-form-video/add-form-video.component';
+import { EditFormVideoComponent } from './edit-form-video/edit-form-video.component';
+import { EditPlaylistComponent } from './edit-playlist/edit-playlist.component';
+import { AddPlaylistComponent } from './add-playlist/add-playlist.component';
+
 
 @NgModule({
   declarations: [
@@ -63,8 +67,10 @@ import { EditVideoComponent } from './edit-video/edit-video.component';
     VideoPlayerComponent,
     PlaylistListComponent,
     PlaylistCardComponent,
-    AddVideoComponent,
-    EditVideoComponent
+    AddFormVideoComponent,
+    EditFormVideoComponent,
+    EditPlaylistComponent,
+    AddPlaylistComponent
   ],
   imports: [
     HttpClientModule,
@@ -107,6 +113,8 @@ import { EditVideoComponent } from './edit-video/edit-video.component';
     MatSortModule,
     MatPaginatorModule,
     FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

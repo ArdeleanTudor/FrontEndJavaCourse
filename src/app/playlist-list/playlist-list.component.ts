@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VideoService } from '../services/video.service';
 
 @Component({
   selector: 'app-playlist-list',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlaylistListComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private videoService: VideoService) { }
+  playlists: any[] = [];
+  getAllPlaylists()  {
+    this.videoService.getPlaylists().subscribe((data: any[]) => {
+        this.playlists = data;
+        console.log(data);
+    });
+  }
   ngOnInit(): void {
+    this.getAllPlaylists();
   }
 
 }

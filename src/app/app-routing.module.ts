@@ -3,8 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageOneComponent } from './page-one/page-one.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import { PlaylistListComponent } from './playlist-list/playlist-list.component';
-import { AddVideoComponent } from './add-video/add-video.component';
-import { EditVideoComponent } from './edit-video/edit-video.component';
+import { AddFormVideoComponent } from './add-form-video/add-form-video.component';
+import { EditFormVideoComponent } from './edit-form-video/edit-form-video.component';
+import { AddPlaylistComponent } from './add-playlist/add-playlist.component';
+import { EditPlaylistComponent } from './edit-playlist/edit-playlist.component';
 
 const routes: Routes = [
   {
@@ -21,11 +23,19 @@ const routes: Routes = [
   },
   {
     path: 'add-video',
-    component: AddVideoComponent
+    component: AddFormVideoComponent
   },
   {
     path: 'edit-video/:id',
-    component: EditVideoComponent
+    component: EditFormVideoComponent
+  },
+  {
+    path: 'add-playlist',
+    component: AddPlaylistComponent
+  },
+  {
+    path: 'edit-playlist/:id',
+    component: EditPlaylistComponent
   }
 ];
 

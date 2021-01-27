@@ -27,7 +27,7 @@ export class VideoPlayerComponent implements OnInit {
   }
 
   getVideo(id: string | number | null): void {
-    this.videoService.getById(id)
+    this.videoService.getVideoById(id)
       .subscribe(
         video => {
           this.video = video;
