@@ -55,6 +55,7 @@ import { AddFormVideoComponent } from './add-form-video/add-form-video.component
 import { EditFormVideoComponent } from './edit-form-video/edit-form-video.component';
 import { EditPlaylistComponent } from './edit-playlist/edit-playlist.component';
 import { AddPlaylistComponent } from './add-playlist/add-playlist.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -114,7 +115,10 @@ import { AddPlaylistComponent } from './add-playlist/add-playlist.component';
     MatPaginatorModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      progressBar: true,
+    }) // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]

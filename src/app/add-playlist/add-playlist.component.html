@@ -5,14 +5,20 @@
             <form [formGroup]="playlistForm" (ngSubmit)="onSubmit()">
               <div class="form-group">
                 <label>Name</label>
-                <input class="form-control" type="text" formControlName="name" required>
+                <input class="form-control" type="text" formControlName="name" required [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                    <div *ngIf="f.name.errors" class="invalid-feedback">First Name is required</div>
+                </div>
               </div>
               <div class="form-group">
-                <label>img Path</label>
-                <input class="form-control" type="text" formControlName="imgPath" required>
-              </div>
+                <label>Image Path</label>
+                <input class="form-control" type="text" formControlName="imgPath" required [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                <div *ngIf="submitted && f.imgPath.errors" class="invalid-feedback">
+                    <div *ngIf="f.imgPath.errors" class="invalid-feedback">Image Path is required</div>
+                </div>
+            </div>
               <div class="form-group">
-                <button class="btn btn-primary btn-block" type="submit">Add Video</button>
+                <button class="btn btn-primary btn-block" type="submit">Add Playlist</button>
               </div>
             </form>
         </div>
