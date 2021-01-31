@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row justify-content-md-center">
+
+<form [formGroup]="manageForm" (ngSubmit)="addVideoToPlaylist()">
+    <div>
+    <h4>Select the playlist to which you want to add a video</h4>
+    <mat-form-field appearance="fill" class="col-md-12">
+      <mat-label>Playlist</mat-label>
+      <mat-select formControlName="playlistId" required [ngClass]="{ 'is-invalid': submitted && f.playlistId.errors }">
+        <mat-option *ngFor="let playlist of playlistsList.data" [value]="playlist.id">
+          {{playlist.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div *ngIf="submitted && f.playlistId.errors" class="invalid-feedback">
+        <div *ngIf="f.playlistId.errors" class="invalid-feedback">Playlist is required</div>
+    </div>
+    </div>
+  
+    <h4>Select the video you want to add to the playlist </h4>
+    <div>
+    <mat-form-field appearance="fill" class="col-md-12">
+        <mat-label>Video</mat-label>
+        <mat-select formControlName="videoId" required [ngClass]="{ 'is-invalid': submitted && f.videoId.errors }">
+          <mat-option *ngFor="let video of videosList.data" [value]="video.id">
+            {{video.name}} - {{video.singer}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div *ngIf="submitted && f.videoId.errors" class="invalid-feedback">
+        <div *ngIf="f.videoId.errors" class="invalid-feedback">Video is required</div>
+    </div>
+</div>
+      <div class="form-group">
+        <button class="btn btn-primary btn-block" type="submit">Add Video to Playlist</button>
+      </div>
+  </form>
+</div>
+</div>

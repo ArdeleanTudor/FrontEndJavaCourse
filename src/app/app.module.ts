@@ -56,6 +56,7 @@ import { EditFormVideoComponent } from './edit-form-video/edit-form-video.compon
 import { EditPlaylistComponent } from './edit-playlist/edit-playlist.component';
 import { AddPlaylistComponent } from './add-playlist/add-playlist.component';
 import { ToastrModule } from 'ngx-toastr';
+import { ManagePlaylistVideosComponent } from './manage-playlist-videos/manage-playlist-videos.component';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { ToastrModule } from 'ngx-toastr';
     AddFormVideoComponent,
     EditFormVideoComponent,
     EditPlaylistComponent,
-    AddPlaylistComponent
+    AddPlaylistComponent,
+    ManagePlaylistVideosComponent
   ],
   imports: [
     HttpClientModule,

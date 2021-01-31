@@ -50,4 +50,8 @@ export class VideoService {
     return this.http.delete(`${this.rootURL}/playlists/${id}`);
   }
 
+
+  addVideoToPlaylist(data: { videoId: number; playlistId: number; }): Observable<any> {
+    return this.http.post(this.rootURL + '/video-playlist', data);
+  }
 }

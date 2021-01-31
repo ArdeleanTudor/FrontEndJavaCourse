@@ -7,6 +7,7 @@ import { AddFormVideoComponent } from './add-form-video/add-form-video.component
 import { EditFormVideoComponent } from './edit-form-video/edit-form-video.component';
 import { AddPlaylistComponent } from './add-playlist/add-playlist.component';
 import { EditPlaylistComponent } from './edit-playlist/edit-playlist.component';
+import { ManagePlaylistVideosComponent } from './manage-playlist-videos/manage-playlist-videos.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'edit-playlist/:id',
     component: EditPlaylistComponent
+  },
+  {
+    path: 'manage-videoPlaylist',
+    component: ManagePlaylistVideosComponent
   }
 ];
 
