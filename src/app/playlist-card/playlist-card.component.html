@@ -13,13 +13,9 @@
     </mat-card-content>
     <mat-card-actions>
       <div>
-        <button mat-button><a routerLink="/play-videos-playlist/{{ playlist.id }}">PLAY</a></button>
-        <button mat-button><a routerLink="/edit-playlist/{{ playlist.id }}">EDIT</a></button>
+        <button mat-button><a routerLink="/playlist-player/{{ playlist.id }}">PLAY</a></button>
         <button mat-button (click)="deletePlaylist()" color="warn">DELETE</button>
       </div>
-    <div>
-      <button  style="margin-left: 17%" mat-button>MANAGE VIDEOS</button>
-    </div>
     </mat-card-actions>
   </mat-card>
 </div>

@@ -34,6 +34,10 @@ export class VideoService {
     return this.http.get(`${this.rootURL}/playlists/${id}`);
   }
 
+  getAllVideosFromPlaylistById(id:number | string | null): Observable<any> {
+    return this.http.get(`${this.rootURL}/playlists/${id}/videos`);
+  }
+
   updateVideo(data : { duration: number; genre: string; imgPath: string; name: string; singer: string; urlCode: string; }): Observable<any> {
     return this.http.put(this.rootURL + '/videos', data);
   }
@@ -50,6 +54,9 @@ export class VideoService {
     return this.http.delete(`${this.rootURL}/playlists/${id}`);
   }
 
+  deleteVideoFromPlaylist(videoId :number, playlistId: number): Observable<any> {
+    return this.http.delete(`${this.rootURL}/video-playlist?videoId=${videoId}&playlistId=${playlistId}`);
+  }
 
   addVideoToPlaylist(data: { videoId: number; playlistId: number; }): Observable<any> {
     return this.http.post(this.rootURL + '/video-playlist', data);
