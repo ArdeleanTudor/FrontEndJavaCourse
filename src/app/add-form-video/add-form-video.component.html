@@ -1,33 +1,52 @@
 <div class="container">
 
+  <h1 class="row justify-content-center mt-5">Add a video </h1>
     <div class="row justify-content-center mt-5">
         <div class="col-md-4">
             <form [formGroup]="videoForm" (ngSubmit)="onSubmit()">
               <div class="form-group">
                 <label>Name</label>
                 <input class="form-control" type="text" formControlName="name" required>
+                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                  <div *ngIf="f.name.errors" class="invalid-feedback">Name is required</div>
+              </div>
               </div>
       
               <div class="form-group">
                 <label>Genre</label>
                 <input class="form-control" type="text" formControlName="genre" required>
+                <div *ngIf="submitted && f.genre.errors" class="invalid-feedback">
+                  <div *ngIf="f.genre.errors" class="invalid-feedback">Genre is required</div>
+              </div>
               </div>
       
               <div class="form-group">
                 <label>img Path</label>
                 <input class="form-control" type="text" formControlName="imgPath" required>
+                <div *ngIf="submitted && f.imgPath.errors" class="invalid-feedback">
+                  <div *ngIf="f.imgPath.errors" class="invalid-feedback">Image Path is required</div>
+              </div>
               </div>
               <div class="form-group">
                 <label>Singer</label>
                 <input class="form-control" type="text" formControlName="singer" required>
+                <div *ngIf="submitted && f.singer.errors" class="invalid-feedback">
+                  <div *ngIf="f.singer.errors" class="invalid-feedback">Singer is required</div>
+              </div>
               </div>
               <div class="form-group">
                 <label>Url code</label>
                 <input class="form-control" type="text" formControlName="urlCode" required>
+                <div *ngIf="submitted && f.urlCode.errors" class="invalid-feedback">
+                  <div *ngIf="f.urlCode.errors" class="invalid-feedback">Url Code is required</div>
+              </div>
               </div>
               <div class="form-group">
                 <label>Duration</label>
                 <input class="form-control" type="number" formControlName="duration" required>
+                <div *ngIf="submitted && f.duration.errors" class="invalid-feedback">
+                  <div *ngIf="f.duration.errors" class="invalid-feedback">Duration is required</div>
+              </div>
               </div>
       
               <div class="form-group">

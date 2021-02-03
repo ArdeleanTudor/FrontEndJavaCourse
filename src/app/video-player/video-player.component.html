@@ -2,27 +2,43 @@
 
 
 <div class="row">
-    <h1 class="song-title">{{video.name}} - {{video.singer}}</h1>
+    <h2 class="song-title">{{video.name}} - {{video.singer}}</h2>
 </div> 
 <div class="row back-btn" >
     <button mat-raised-button color="primary"><a routerLink="/">Back</a></button>
 </div> 
 
 <div class="row videoPlayerDiv">
-    <iframe width="820" height="445" src="https://www.youtube.com/embed/mWRsgZuwf_8">
+    <iframe width="820" height="445" [src]="safeUrl">
     </iframe>
 </div>
 
-<div> 
+<div class="row justify-content-center mt-5">
+<div class="details"> 
     <h2>Details:</h2>
-    <p><b>Name: </b> {{video.name}}</p>
-    <p><b>Singer: </b> {{video.singer}}</p>
-    <p><b>Genre: </b> {{video.genre}}</p>
-    <p><b>Description: </b> {{video.description}}</p>
-    <p><b>Duration: </b> {{video.duration}}</p>
+</div>
+<div>
+
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Singer</th>
+            <th>Genre</th>
+            <th>Duration</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{video.name}}</td>
+            <td>{{video.singer}}</td>
+            <td>{{video.genre}}</td>
+            <td>{{video.duration}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
 </div>
 
-<div><p>urlCode: {{video.urlCode}}</p></div>
-<div><p>urlIframe: {{urlIframe}}</p></div>
-<div><p>safe: {{safeUrl}}</p></div>
-</div>

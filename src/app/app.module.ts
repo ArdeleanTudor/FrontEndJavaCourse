@@ -53,7 +53,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddFormVideoComponent } from './add-form-video/add-form-video.component';
 import { EditFormVideoComponent } from './edit-form-video/edit-form-video.component';
-import { EditPlaylistComponent } from './edit-playlist/edit-playlist.component';
 import { AddPlaylistComponent } from './add-playlist/add-playlist.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ManagePlaylistVideosComponent } from './manage-playlist-videos/manage-playlist-videos.component';
@@ -72,7 +71,6 @@ import { PlaylistPlayerComponent } from './playlist-player/playlist-player.compo
     PlaylistCardComponent,
     AddFormVideoComponent,
     EditFormVideoComponent,
-    EditPlaylistComponent,
     AddPlaylistComponent,
     ManagePlaylistVideosComponent,
     PlaylistPlayerComponent

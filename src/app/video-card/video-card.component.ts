@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { VideoService } from '../services/video.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-video-card',
@@ -13,7 +14,8 @@ export class VideoCardComponent implements OnInit {
 
   constructor(
     private videoService: VideoService,
-    private router: Router) { }
+    private router: Router,
+    private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -23,10 +25,11 @@ export class VideoCardComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
-          this.router.navigate(['/video-list']);
+          this.toastr.success('The video has been deleted successfully!', 'Success');
         },
         error => {
           console.log(error);
+          this.toastr.error(error.error, 'There was an error to delete the video!');
         });
   }
 }

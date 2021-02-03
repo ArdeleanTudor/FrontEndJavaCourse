@@ -1,8 +1,11 @@
 <div class="container">
-<div class="col-md-12" style="display: flex; margin-top: 70px;">
+  <div class="row justify-content-center mt-5">
+<h2> Videos from Playlist <b style="color:  rgba(39, 16, 245, 0.774);">{{playlistName}}</b> </h2>
 
+  </div>
+<div class="col-md-12" style="display: flex; margin-top: 30px;">
     <div class="row videoPlayerDiv col-md-6">
-        <iframe width="500" height="450" src="https://www.youtube.com/embed/mWRsgZuwf_8">
+        <iframe width="500" height="450" [src]="currentVideoUrl">
         </iframe>
     </div>
 
@@ -11,7 +14,7 @@
             <div class="example-dl">
               <ng-container *ngFor="let video of playlistVideos.videos">
                 <div style="display:flex; margin: 10px;" class="playlistDiv">
-                    <img class="videoImg" mat-card-image src="assets\media\{{video.imgPath}}" alt="Img Video">
+                    <img class="videoImg" mat-card-image src="assets\media\{{video.imgPath}}" alt="Img Video" (click)="switchVideo(video.id)">
                     <div class="example-dt">
                         <p><b> {{video.name}} - {{video.singer}} </b></p>
                         <p>{{video.genre}}</p>

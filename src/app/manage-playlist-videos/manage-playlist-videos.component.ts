@@ -59,9 +59,8 @@ export class ManagePlaylistVideosComponent implements OnInit {
     {
       this.videoService.addVideoToPlaylist(this.manageForm.value)
       .subscribe(() => {
-        this.manageForm.reset();
-        this.manageForm.markAsPristine();
-        this.manageForm.markAsUntouched();
+        this.manageForm.reset()
+        this.submitted = false;
           this.toastr.success('The video has been added successfully to playlist!', 'Success');
         }, (err) => {
           this.toastr.error(err.error, 'There was an error to add the video!');

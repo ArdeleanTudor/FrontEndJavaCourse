@@ -37,10 +37,12 @@ export class AddPlaylistComponent implements OnInit {
     this.submitted = true;
     this.videoService.createPlaylist(this.playlistForm.value)
     .subscribe(() => {
+      this.playlistForm.reset()
+      this.submitted = false;
         console.log('Data added successfully!')
         this.toastr.success('The playlist has been added successfully!', 'Success');
       }, (err) => {
-        this.toastr.error(err.message, 'There was an error to create the playlist!');
+        this.toastr.error(err.error, 'There was an error to create the playlist!');
 
         console.log(err);
     });

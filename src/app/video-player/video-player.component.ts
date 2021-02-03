@@ -13,7 +13,7 @@ export class VideoPlayerComponent implements OnInit {
 
   video = null;
   urlIframe: string | undefined ;
-  safeUrl: string | null | undefined;
+  safeUrl: any;
 
   constructor(
     private videoService: VideoService,
@@ -33,7 +33,7 @@ export class VideoPlayerComponent implements OnInit {
           this.video = video;
           console.log(video);
           this.urlIframe = "https://www.youtube.com/embed/" + video.urlCode;
-          this.safeUrl =  this.sanitizer.sanitize(SecurityContext.RESOURCE_URL, this.sanitizer.bypassSecurityTrustResourceUrl(this.urlIframe));;
+          this.safeUrl =  this.sanitizer.bypassSecurityTrustResourceUrl(this.urlIframe);
         },
         error => {
           console.log(error);
